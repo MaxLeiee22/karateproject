@@ -1,0 +1,81 @@
+12:06:17.779 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+12:06:20.118 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+12:06:20.989 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.thedogapi.com/v1/votes
+1 > x-api-key: live_s0XIIQyza3Q6j7eoB0qkwSCqX6DoEaDL0nnbyiXYcpOL5Y664TZjbxQu6m0a1q2t
+1 > content: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: api.thedogapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/19.0.2)
+1 > Accept-Encoding: gzip,deflate
+{"image_id":"maxl","sub_id":"max8788","value":55}
+
+12:06:22.966 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1905
+1 < 201
+1 < x-dns-prefetch-control: off
+1 < x-frame-options: SAMEORIGIN
+1 < strict-transport-security: max-age=15552000; includeSubDomains
+1 < x-download-options: noopen
+1 < x-content-type-options: nosniff
+1 < x-xss-protection: 1; mode=block
+1 < vary: Origin
+1 < retry-after-seconds: 59.999
+1 < ratelimit-limit: 120
+1 < ratelimit-remaining: 119
+1 < ratelimit-consumed: 1
+1 < ratelimit-reset: 2024-04-09T10:07:21.911Z
+1 < content-type: application/json; charset=utf-8
+1 < x-response-time: 543ms
+1 < X-Cloud-Trace-Context: 365afd0ecc753e1413a1068edaf74eb1
+1 < Date: Tue, 09 Apr 2024 10:06:22 GMT
+1 < Server: Google Frontend
+1 < Content-Length: 101
+{"message":"SUCCESS","id":196590,"image_id":"maxl","sub_id":"max8788","value":55,"country_code":"ZA"}
+
+12:06:23.086 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > GET https://api.thedogapi.com/v1/votes/196590
+1 > x-api-key: live_s0XIIQyza3Q6j7eoB0qkwSCqX6DoEaDL0nnbyiXYcpOL5Y664TZjbxQu6m0a1q2t
+1 > content: application/json
+1 > Host: api.thedogapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/19.0.2)
+1 > Accept-Encoding: gzip,deflate
+
+
+12:06:24.121 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1033
+1 < 200
+1 < x-dns-prefetch-control: off
+1 < x-frame-options: SAMEORIGIN
+1 < strict-transport-security: max-age=15552000; includeSubDomains
+1 < x-download-options: noopen
+1 < x-content-type-options: nosniff
+1 < x-xss-protection: 1; mode=block
+1 < vary: Origin
+1 < retry-after-seconds: 58.493
+1 < ratelimit-limit: 120
+1 < ratelimit-remaining: 118
+1 < ratelimit-consumed: 2
+1 < ratelimit-reset: 2024-04-09T10:07:21.911Z
+1 < content-type: application/json; charset=utf-8
+1 < x-response-time: 192ms
+1 < X-Cloud-Trace-Context: cf46b2191468034e4c219485df763dd3
+1 < Date: Tue, 09 Apr 2024 10:06:23 GMT
+1 < Server: Google Frontend
+1 < Content-Length: 151
+{"id":196590,"user_id":"0nqxbq","image_id":"maxl","sub_id":"max8788","created_at":"2024-04-09T10:06:22.000Z","value":55,"country_code":"ZA","image":{}}
+
+12:06:24.158 [pool-1-thread-1] INFO  com.intuit.karate - [print] {
+  "id": 196590,
+  "user_id": "0nqxbq",
+  "image_id": "maxl",
+  "sub_id": "max8788",
+  "created_at": "2024-04-09T10:06:22.000Z",
+  "value": 55,
+  "country_code": "ZA",
+  "image": {
+  }
+}
+ 
+12:06:25.750 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:TheDogApi/votes/createVotes.feature
