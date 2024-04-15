@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
@@ -30,13 +32,13 @@ jobs:
         cache: maven
 
     - name: Clean
-        run: mvn clean --file simpletool-karate/pom.xml
+      run: mvn clean --file simpletool-karate/pom.xml
 
     - name: Compile
-        run: mvn compile --file simpletool-karate/pom.xml
+      run: mvn compile --file simpletool-karate/pom.xml
 
     - name: Run Tests
-        run: mvn test --file simpletool-karate/pom.xml -Dtest=TheDogApiTest
-        if: (github.ref == 'refs/heads/Kopano' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
+      run: mvn test --file simpletool-karate/pom.xml -Dtest=TheDogApiTest
+      if: (github.ref == 'refs/heads/Kopano' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
 
       
