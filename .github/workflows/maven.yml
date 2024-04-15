@@ -11,8 +11,8 @@ name: Java CI with Maven
 on:
   push:
     branches: 
-	- Testing
-	- master
+      - Testing
+      - master
  
 
 jobs:
