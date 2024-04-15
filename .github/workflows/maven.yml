@@ -28,4 +28,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean test --file simpletool-karate/pom.xml -Dtest=TheDogApiTest/votes/generic_getVotes.feature
+      run: mvn clean test --file simpletool-karate/pom.xml -Dtest=TheDogApiTest
