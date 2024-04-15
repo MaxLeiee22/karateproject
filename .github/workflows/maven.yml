@@ -39,6 +39,6 @@ jobs:
 
     - name: Run Tests
       run: mvn test --file simpletool-karate/pom.xml -Dtest=TheDogApiTest
-      if: (github.ref == 'refs/heads/Kopano' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
+      if: (github.ref == 'refs/heads/Testing' && github.event_name == 'push') || (github.ref == 'refs/heads/master' && github.event_name == 'push')
 
       
