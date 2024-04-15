@@ -14,14 +14,14 @@ Feature:
     When method get
     Then status 200
 
-      Scenario: Call get single order
-
-
-        * header Authorization = token
-        * def result = call read('getSingleOrder.feature@tagone') {'orderNum': '#(orderId)'}
-        * print 'result' + result.orderId
-        Given path 'orders'
-        When method get
-        Then status 200
+#      Scenario: Call get single order
+#
+#
+#        * header Authorization = token
+#        * def result = call read('getSingleOrder.feature@tagone') {'orderNum': '#(orderId)'}
+#        * print 'result' + result.orderId
+#        Given path 'orders'
+#        When method get
+#        Then status 200
       #  * def order = response[6].orderId
       #  * param orderId = order

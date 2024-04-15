@@ -17,7 +17,7 @@ class TheDogApiTest {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:TheDogApi/votes/createVotes.feature")
+        Results results = Runner.path("classpath:TheDogApi/votes/generic_getVotes.feature")
                 .outputCucumberJson(true)
                 .parallel(5);
         generateReport(results.getReportDir());
